@@ -3,6 +3,9 @@
 // Description: drap and drop tile based app allowing you to add, remove, and 
 // configure text blobs in useful ways
 
+// ToDo
+// make elements draggable
+// make elements resizable
 
 
 
@@ -35,11 +38,13 @@ function removeElement(el){
 
 
 // --- Application main body
-
 function addElement() {
 	
 	// create elements
-	var container = createElementSetAttribute("div", "class", "fieldContainer");
+	var dropLocation = createElementSetAttribute("div", "class", "dropLocation")
+	dropLocation.setAttribute("ondrop","drop(event)")
+	dropLocation.setAttribute("ondragover","allowDrop(event)")
+	var container = createElementSetAttribute("div", "class", "fieldContainer theme");
 		container.setAttribute("draggable", "true")
 	container.setAttribute("ondragstart", "drag(event)");
 	
@@ -53,13 +58,13 @@ function addElement() {
 	
 	// add x character to removebutton to make it visible
 	setText(removeButton, "X");
-	
 	container.appendChild(removeButton);
 	container.appendChild(newEl);
+	dropLocation.appendChild(container)
 
 
 	var main = document.getElementById("main");
-	main.appendChild(container);
+	main.appendChild(dropLocation);
 }
 
 // --- Application main body
