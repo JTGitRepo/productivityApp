@@ -1,0 +1,63 @@
+body {
+	margin: 0;
+}
+
+/* div { border: 1px solid black;} */
+.theme {
+	padding: 2%;
+	background: #5af;
+	font-family: arial;
+	color: #fafafa;
+}
+
+#main {
+	height: 100%;
+}
+
+#top-bar {
+	font-size: 4em;
+}
+
+#add {
+	padding: 0 2%;
+	float: left;
+}
+
+
+#topText {
+	text-align: center;
+}
+
+
+
+
+
+.fieldContainer{
+	height: 100%;
+	padding: 2%;
+	font-size: 4em;
+}
+
+.removeButton {
+	float: left;
+	padding: 2% 5%;
+
+
+}
+
+.newField {
+	padding: 2%;
+	/* background: #5cF; */
+}
+
+
+
+.div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+
+
+
+
+
+	
+
+	
