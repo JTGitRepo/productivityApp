@@ -45,14 +45,13 @@ function addElement() {
 	dropLocation.setAttribute("ondrop","drop(event)")
 	dropLocation.setAttribute("ondragover","allowDrop(event)")
 	var container = createElementSetAttribute("div", "class", "fieldContainer theme");
-		container.setAttribute("draggable", "true")
+	container.setAttribute("draggable", "true")
 	container.setAttribute("ondragstart", "drag(event)");
 	
 	var removeButton = createElementSetAttribute("div", "class", "removeButton");
 	removeButton.setAttribute("onclick", "removeElement(this)");
 	
-	var newEl = createElementSetAttribute("div", "class", "newField");
-	newEl.setAttribute("contenteditable", "");
+	var newEl = createElementSetAttribute("textarea", "class", "newField theme");
 	
 	
 	
@@ -60,11 +59,11 @@ function addElement() {
 	setText(removeButton, "X");
 	container.appendChild(removeButton);
 	container.appendChild(newEl);
-	dropLocation.appendChild(container)
+	//dropLocation.appendChild(container)
 
 
 	var main = document.getElementById("main");
-	main.appendChild(dropLocation);
+	main.appendChild(container);
 }
 
 // --- Application main body

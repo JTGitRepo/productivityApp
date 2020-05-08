@@ -11,12 +11,14 @@ body {
 }
 
 #main {
-	background-color: gray;
-	vh: 100%;
+	height: 200vh;
+	background-color: #5ef;
+	
 }
 
 #top-bar {
 	font-size: 4em;
+	
 }
 
 #add {
@@ -34,21 +36,30 @@ body {
 
 
 .fieldContainer{
-	height: 100%;
+margin-top: 2%;
+	box-shadow: 5px 5px 10px darkblue;
+/*	height: 100%;*/
 	padding: 2%;
-	font-size: 4em;
+	font-size: 2em;
+	
 }
 
 .removeButton {
 	float: left;
 	padding: 2% 5%;
-
+	
 
 }
 
 .newField {
+	height: 100%;
+	font-size: 1.5em;
+	border: none;
+	resize: both;
+	overflow: auto;
 	padding: 2%;
-	/* background: #5cF; */
+	width: 80%; 
+	
 }
 
 
